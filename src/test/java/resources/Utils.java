@@ -40,7 +40,7 @@ public class Utils {
 	public static String getGlobalValue(String key) throws IOException
 	{
 		Properties prop =new Properties();
-		FileInputStream fis =new FileInputStream("C:\\Users\\rahul\\restassured\\APIFramework\\src\\test\\java\\resources\\global.properties");
+		FileInputStream fis =new FileInputStream(".\\src\\test\\java\\resources\\global.properties");
 		prop.load(fis);
 		return prop.getProperty(key);
 	
@@ -55,4 +55,6 @@ public class Utils {
 		JsonPath   js = new JsonPath(resp);
 		return js.get(key).toString();
 	}
+
+
 }
